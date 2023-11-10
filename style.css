@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 200vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.primary-header {
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.primary-navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    border: 2px solid;
+    z-index: 9;
+    --value: 12;
+}
+
+/* parallax */
+
+.parallax {
+    width: 100vw;
+    position: relative;
+    min-height: 75vh;
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+.parallax > * {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+}
+
+.parallax > img {
+    width: 100%;
+}
+
+/* images */
+
+.smoke {
+    z-index: 7;
+    position: absolute;
+    --value: 3;
+}
+
+.graphy {
+    z-index: 8;
+    position: absolute;
+    top: 50px;
+    --value: -1;
+}
+
+@keyframes parallax {
+    to {
+        transform: translateY(calc(var(--value) * 100px));
+    }
+}
