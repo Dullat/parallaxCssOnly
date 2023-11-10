@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 200vh;
+    min-height: 100vh;
 }
 
 ul {
@@ -32,12 +32,21 @@ ul {
     --value: 12;
 }
 
+/* plane div */
+.plane {
+    height: 200vh;
+    background-color: antiquewhite;
+    z-index: 99;
+    position: relative;
+}
+
 /* parallax */
 
 .parallax {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    min-height: 75vh;
+    z-index: 0;
+    min-height: 80vh;
     display: grid;
     grid-template-areas: "stack";
 }
